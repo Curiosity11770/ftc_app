@@ -66,6 +66,8 @@ public class GlobalCoordinatePositionUpdateSample extends LinearOpMode {
         Thread positionThread = new Thread(globalPositionUpdate);
         positionThread.start();
 
+        globalPositionUpdate.reverseNormalEncoder();
+
         while(opModeIsActive()){
             //Display Global (x, y, theta) coordinates
             telemetry.addData("X Position", globalPositionUpdate.returnXCoordinate() / COUNTS_PER_INCH);
