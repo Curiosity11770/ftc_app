@@ -39,8 +39,8 @@ public class MyOdometryOpmode extends LinearOpMode {
         Thread positionThread = new Thread(globalPositionUpdate);
         positionThread.start();
 
-        globalPositionUpdate.reverseRightEncoder();
-        globalPositionUpdate.reverseLeftEncoder();
+        //globalPositionUpdate.reverseRightEncoder();
+        //globalPositionUpdate.reverseLeftEncoder();
         globalPositionUpdate.reverseNormalEncoder();
 
         while(opModeIsActive()){
