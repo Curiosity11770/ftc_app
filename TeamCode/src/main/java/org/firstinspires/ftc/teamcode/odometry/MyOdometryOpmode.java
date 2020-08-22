@@ -39,7 +39,7 @@ public class MyOdometryOpmode extends LinearOpMode {
         Thread positionThread = new Thread(globalPositionUpdate);
         positionThread.start();
 
-        //globalPositionUpdate.reverseRightEncoder();
+        globalPositionUpdate.reverseRightEncoder();
         //globalPositionUpdate.reverseLeftEncoder();
         globalPositionUpdate.reverseNormalEncoder();
 
@@ -87,7 +87,7 @@ public class MyOdometryOpmode extends LinearOpMode {
         horizontal.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
         //verticalLeft.setDirection(DcMotorSimple.Direction.REVERSE);
-        //verticalRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        verticalRight.setDirection(DcMotorSimple.Direction.REVERSE);
         horizontal.setDirection(DcMotorSimple.Direction.REVERSE);
 
         verticalLeft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
