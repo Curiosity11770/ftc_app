@@ -17,7 +17,7 @@ public class MyOdometryOpmode extends LinearOpMode {
     //Odometry Wheels
     DcMotor verticalLeft, verticalRight, horizontal;
 
-    final double COUNTS_PER_INCH = 307.699557;
+    final double COUNTS_PER_INCH = 1304.45859873;
 
     //Hardware Map Names for drive motors and odometry wheels. THIS WILL CHANGE ON EACH ROBOT, YOU NEED TO UPDATE THESE VALUES ACCORDINGLY
     String rfName = "right_front", rbName = "right_back", lfName = "left_front", lbName = "left_back";
