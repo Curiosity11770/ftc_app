@@ -77,6 +77,10 @@ public class MyOdometryOpmode extends LinearOpMode {
             double robotMovementXComponent = calculateX(robotMovementAngle, robotPower);
             double robotMovementYComponent = calculateY(robotMovementAngle, robotPower);
             double pivotCorrection = desiredRobotOrientation - globalPositionUpdate.returnOrientation();
+            //set left front motor power to +y component + x robotMovementXComponent + turn
+            //set left back motor power to +y component - x robotMovementXComponent +turn
+            //set right front motor power to +y component - x robotMovementXComponent - turn
+            //set right back motor power to +y component + x component
         }
     }
     private void initDriveHardwareMap(String rfName, String rbName, String lfName, String lbName, String vlEncoderName, String vrEncoderName, String hEncoderName){
