@@ -68,7 +68,7 @@ public class MyOdometryOpmode extends LinearOpMode {
         double distanceToYTarget = targetYPosition - globalPositionUpdate.returnYCoordinate();
         double distance = Math.hypot(distanceToXTarget, distanceToYTarget);
         while(opModeIsActive() && distance > allowableDistanceError){
-            Math.hypot(distanceToXTarget, distanceToYTarget);
+            distance = Math.hypot(distanceToXTarget, distanceToYTarget);
             //legs of triangle
             distanceToXTarget = targetXPosition - globalPositionUpdate.returnXCoordinate();
             distanceToYTarget = targetYPosition - globalPositionUpdate.returnYCoordinate();
@@ -114,8 +114,9 @@ public class MyOdometryOpmode extends LinearOpMode {
         left_back.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
         left_front.setDirection(DcMotorSimple.Direction.REVERSE);
-        right_front.setDirection(DcMotorSimple.Direction.REVERSE);
-        right_back.setDirection(DcMotorSimple.Direction.REVERSE);
+        //right_front.setDirection(DcMotorSimple.Direction.REVERSE);
+        //right_back.setDirection(DcMotorSimple.Direction.REVERSE);
+        left_back.setDirection(DcMotorSimple.Direction.REVERSE);
 
         telemetry.addData("Status", "Hardware Map Init Complete");
         telemetry.update();
