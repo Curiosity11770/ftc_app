@@ -55,6 +55,8 @@ public class MyOdometryOpmode extends LinearOpMode {
 
             telemetry.addData("Thread Active", positionThread.isAlive());
             telemetry.update();
+
+            goToPosition(12 * COUNTS_PER_INCH, 12* COUNTS_PER_INCH, 0.3, 0, 2* COUNTS_PER_INCH);
         }
 
         //Stop the thread
@@ -78,11 +80,26 @@ public class MyOdometryOpmode extends LinearOpMode {
             double robotMovementYComponent = calculateY(robotMovementAngle, robotPower);
             double pivotCorrection = desiredRobotOrientation - globalPositionUpdate.returnOrientation();
             //set left front motor power to +y component + x robotMovementXComponent + turn
+            double leftFrontInfo = robotMovementYComponent + robotMovementXComponent;
             //set left back motor power to +y component - x robotMovementXComponent +turn
+            double leftBackInfo = robotMovementYComponent - robotMovementXComponent;
             //set right front motor power to +y component - x robotMovementXComponent - turn
+            double rightFrontInfo = robotMovementYComponent - robotMovementXComponent;
             //set right back motor power to +y component + x component
+            double rightBackInfo = robotMovementYComponent + robotMovementXComponent;
+
+            left_front.setPower(leftFrontInfo);
+            left_back.setPower(leftBackInfo);
+            right_front.setPower(rightFrontInfo);
+            right_back.setPower(rightBackInfo);
         }
+
+        left_front.setPower(0);
+        left_back.setPower(0);
+        right_front.setPower(0);
+        right_back.setPower(0);
     }
+
     private void initDriveHardwareMap(String rfName, String rbName, String lfName, String lbName, String vlEncoderName, String vrEncoderName, String hEncoderName){
         right_front = hardwareMap.dcMotor.get(rfName);
         right_back = hardwareMap.dcMotor.get(rbName);
