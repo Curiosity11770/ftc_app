@@ -4,7 +4,7 @@ This markdown file exists for members of Curiosity new to coding with GitHub and
 To practice, you can write your names down below!
 
 - Katie
-- ???
+- ????
 
 Once you write down your names, 
 1) go back to GitHub Desktop: 
