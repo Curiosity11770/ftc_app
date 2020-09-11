@@ -11,7 +11,7 @@ Once you write down your names,
 2) add a summary of your changes
 3) commit them
 4) push them
-5) Go to the GitHub site https://github.com/Curiosity11770/ftc_app
+5) Go to this GitHub site https://github.com/Curiosity11770/ftc_app/blob/master/TeamCode/src/main/java/org/firstinspires/ftc/teamcode/practice_with_github.md
 6) Make sure your changes to this document are visible to you
 7) Have an amazing week!
 
