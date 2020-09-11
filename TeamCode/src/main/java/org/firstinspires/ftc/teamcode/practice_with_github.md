@@ -15,8 +15,10 @@ Once you write down your names,
 6) Make sure your changes to this document are visible to you
 7) Have an amazing week!
 
-# If you have questions you can email
+### If you have questions you can email
 
 - katescoles-bran23@marlborough.org
 - chesneymelissinos23@marlborough.org
+- darren.kessner@marlborough.org
+- andrew.witman@marlborough.org
 
